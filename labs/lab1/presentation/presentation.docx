@@ -1,0 +1,237 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=43,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{metropolis}
+\usefonttheme{serif} % use mainfont rather than sansfont for slide text
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{PT Serif}
+  \setsansfont[]{PT Sans}
+  \setmonofont[]{PT Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{russian}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{PT Serif}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+\makeatletter
+\beamer@ignorenonframefalse
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Отчёт по лабораторной работе №1},
+  pdfauthor={Первойкин Илья Сергеевич},
+  pdflang={ru-RU},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Отчёт по лабораторной работе №1}
+\author{Первойкин Илья Сергеевич}
+\date{9 Сентября 2023}
+\institute{РУДН, Москва, Россия}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{Отчет по лабораторной работы
+№1}\label{ux43eux442ux447ux435ux442-ux43fux43e-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-1}
+
+\begin{frame}{Выбор языков в виртуальной машине}
+\phantomsection\label{ux432ux44bux431ux43eux440-ux44fux437ux44bux43aux43eux432-ux432-ux432ux438ux440ux442ux443ux430ux43bux44cux43dux43eux439-ux43cux430ux448ux438ux43dux435}
+\begin{figure}
+\phantomsection\label{fig:001}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/1.png}
+\caption{Выбор языков}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Установка виртуальной машины}
+\phantomsection\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux432ux438ux440ux442ux443ux430ux43bux44cux43dux43eux439-ux43cux430ux448ux438ux43dux44b}
+\begin{figure}
+\phantomsection\label{fig:002}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/2.png}
+\caption{Установка}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Работа с виртуальной машиной (Домашняя работа №1)}
+\phantomsection\label{ux440ux430ux431ux43eux442ux430-ux441-ux432ux438ux440ux442ux443ux430ux43bux44cux43dux43eux439-ux43cux430ux448ux438ux43dux43eux439-ux434ux43eux43cux430ux448ux43dux44fux44f-ux440ux430ux431ux43eux442ux430-1}
+\begin{itemize}
+\tightlist
+\item
+  На данном слайде представлено одно из заданий Домашней работы к
+  лабораторной работе №1
+\end{itemize}
+
+\begin{figure}
+\phantomsection\label{fig:003}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.png}
+\caption{Задание}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Основные команды git}
+\phantomsection\label{ux43eux441ux43dux43eux432ux43dux44bux435-ux43aux43eux43cux430ux43dux434ux44b-git}
+\begin{itemize}
+\tightlist
+\item
+  На данном скриншоте представлены команды git, которые позволяют
+  конфигурировать git на компьютере
+\end{itemize}
+
+\begin{figure}
+\phantomsection\label{fig:004}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.png}
+\caption{Задание}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Работа с Markdown}
+\phantomsection\label{ux440ux430ux431ux43eux442ux430-ux441-markdown}
+\begin{itemize}
+\tightlist
+\item
+  На данных скриншотах представлены команды, которые позволяют
+  преобразовать файл .markdown в файлы .pdf и .docx соответственно
+\end{itemize}
+
+\begin{figure}
+\phantomsection\label{fig:005}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.png}
+\caption{Задание}\label{fig:005}
+\end{figure}
+
+\begin{figure}
+\phantomsection\label{fig:006}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/6.png}
+\caption{Задание}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Выводы}
+\phantomsection\label{ux432ux44bux432ux43eux434ux44b}
+\begin{itemize}
+\tightlist
+\item
+  Установил VirtualBox, изучил её работу.
+\item
+  Изучил идеологию и научился применять средства контроля версий.
+\item
+  Научился работать с Markdown-файлами.
+\item
+  Научился создавать pdf и docx файлы из файла Markdown (с помощью
+  команды make);
+\end{itemize}
+\end{frame}
+
+\end{document}
